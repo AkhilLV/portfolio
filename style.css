@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,600;1,700&display=swap");
+
+/* Global */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", "Helvetica", "Arial";
+  color: #111;
+}
+
+.container {
+  padding: 60px 100px 100px 60px;
+}
+
+/* Types */
+
+/* h1: Hero h2: Tagline h3: Section headings h4: Other headings */
+
+h1 {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-weight: 100;
+  font-size: 1.3rem;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+/* Buttons */
+
+.button {
+  display: inline-block;
+  background: #ff4a4a;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 25px;
+  font-weight: 500;
+  border-radius: 2px;
+  transition: 250ms ease-in-out;
+}
+
+.button-shadow {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.button-dark {
+  background: #333;
+  box-shadow: none;
+}
+
+.button-ghost {
+  background: transparent;
+  border: 1px solid #ff4a4a;
+  color: #ff4a4a;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-shadow:hover {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Hero */
+.hero {
+  background-image: url("./images/hero-image-hd.jpg");
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.hero .hero-nav {
+  margin-bottom: 60px;
+}
+
+.hero .hero-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero .hero-nav ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  transition: 250ms ease-in-out;
+}
+
+.hero .hero-nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.hero .hero-content {
+  margin-bottom: 30px;
+}
+
+.hero .hero-button {
+  font-size: 1rem;
+}
+
+/* Projects */
+
+.projects h3 {
+  margin-bottom: 60px;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.project-list .project {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.project-list .project .project-title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.project-list .project .project-description {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.project-list .project .project-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Skills */
+
+.skills {
+  background: rgb(252, 252, 252);
+}
+.skills h3 {
+  margin-bottom: 60px;
+}
+
+.skills .skill-list {
+  display: flex;
+  width: 500px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skills .skill-list p {
+  background: rgb(233, 233, 233);
+  padding: 5px 8px;
+  border-radius: 3px;
+}
+
+/* About */
+
+.about {
+  border-bottom: 10px #333 solid;
+}
+
+.about h3 {
+  margin-bottom: 60px;
+}
+
+.about .paragraph {
+  width: 50%;
+  line-height: 1.7;
+}
+
+.about code {
+  background: #ff4a4a;
+  border-radius: 3px;
+  color: #fff;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* JS Classes */
+
+.projects-dark {
+  color: #fff;
+  background-color: #111;
+}
+
+.button-dark {
+  border-color: #fff;
+  color: #fff;
+}
+
+.skills-dark {
+  background: #222;
+  color: #fff;
+}
+
+.skill-dark {
+  color: #fff;
+  background-color: #333 !important;
+}
+
+.about-dark {
+  color: #fff;
+  background-color: #111;
+}
+
+/* Media Queries */
+@media (max-width: 1365px) {
+  .project-list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+}
+
+@media (max-width: 705px) {
+  .container {
+    padding: 60px 50px 100px 50px;
+  }
+  /* Hero */
+  h1 {
+    font-size: 1.5rem;
+  }
+  .hero .hero-nav ul {
+    gap: 20px;
+  }
+  /* Projects */
+  .project-list {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+  }
+  /* Skills */
+  .skills .skill-list {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  /* About */
+  .about .paragraph {
+    width: 100%;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 280px) {
+  .container {
+    padding: 60px 20px 100px 20px;
+  }
+  .project-list .project .project-buttons {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+    justify-content: space-around;
+    text-align: center;
+  }
+}
