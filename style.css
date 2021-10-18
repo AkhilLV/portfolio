@@ -79,7 +79,7 @@ h4 {
 
 /* Hero */
 .hero {
-  background-image: url("./images/hero-image-hd.jpg");
+  background-image: url("./images/hero-image.jpg");
   background-color: rgba(0, 0, 0, 0.4);
   background-blend-mode: overlay;
   background-size: cover;
@@ -149,6 +149,20 @@ h4 {
 .project-list .project .project-description {
   margin-bottom: 40px;
   text-align: center;
+}
+
+.project-list .project .project-tech-stack {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.project-list .project .project-tech-stack .skill {
+  background: rgb(255, 230, 235);
+  padding: 5px 8px;
+  border-radius: 3px;
 }
 
 .project-list .project .project-buttons {
