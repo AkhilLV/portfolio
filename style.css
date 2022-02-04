@@ -253,7 +253,7 @@ h4 {
 @media (max-width: 705px) {
   
   .container {
-    padding: 60px 50px 100px 50px;
+    padding: 60px 25px 100px 25px;
   }
   /* Hero */
   h1 {
@@ -281,9 +281,6 @@ h4 {
 }
 
 @media (max-width: 280px) {
-  .container {
-    padding: 60px 10px 100px 10px;
-  }
   .project-list .project .project-buttons {
     display: flex;
     flex-direction: column;
