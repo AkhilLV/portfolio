@@ -130,7 +130,7 @@ h4 {
 .project-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  grid-gap: 100px;
 }
 
 .project-list .project {
@@ -138,6 +138,7 @@ h4 {
   border-radius: 4px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 30px;
 }
 

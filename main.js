@@ -1,4 +1,4 @@
-const elements = {
+const dom = {
   darkModeButton: document.getElementById('dark-mode-toggle'),
   projects: document.querySelector('.projects'),
   skills: document.querySelector('.skills'),
@@ -11,22 +11,22 @@ const elements = {
 const handleClick = e => {
   e.preventDefault()
 
-  elements.projects.classList.toggle('projects-dark')
-  elements.skills.classList.toggle('skills-dark')
-  elements.about.classList.toggle('about-dark')
+  dom.projects.classList.toggle('projects-dark')
+  dom.skills.classList.toggle('skills-dark')
+  dom.about.classList.toggle('about-dark')
 
-  elements.buttonGhost.forEach(button => {
+  dom.buttonGhost.forEach(button => {
     button.classList.toggle('button-dark')
   })
 
-  elements.skill.forEach(el => {
+  dom.skill.forEach(el => {
     el.classList.toggle('skill-dark')
   })
 
-  if (elements.darkModeButton.textContent === 'Light Mode') {
-    elements.darkModeButton.textContent = 'Dark Mode'
+  if (dom.darkModeButton.textContent === 'Light Mode') {
+    dom.darkModeButton.textContent = 'Dark Mode'
   } else {
-    elements.darkModeButton.textContent = 'Light Mode'
+    dom.darkModeButton.textContent = 'Light Mode'
   }
 }
 
@@ -43,5 +43,5 @@ const copyToClipboard = () => {
   alert('Copied to clipboard!')
 };
 
-elements.darkModeButton.addEventListener('click', handleClick)
-elements.email.addEventListener('click', copyToClipboard)
+dom.darkModeButton.addEventListener('click', handleClick)
+dom.email.addEventListener('click', copyToClipboard)
