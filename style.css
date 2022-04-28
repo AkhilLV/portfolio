@@ -79,11 +79,12 @@ h4 {
 
 /* Hero */
 .hero {
-  background-image: url("./images/hero-image.jpg");
+  background-image: url("./images/hero.jpg");
   background-color: rgba(0, 0, 0, 0.4);
   background-blend-mode: overlay;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   color: #fff;
 }
 
@@ -143,7 +144,7 @@ h4 {
 }
 
 .project-list .project .project-title {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   text-align: center;
 }
 
@@ -187,7 +188,7 @@ h4 {
   gap: 20px;
 }
 
-.skills .skill-list p {
+.skills .skill-list .skill {
   background: rgb(233, 233, 233);
   padding: 5px 8px;
   border-radius: 3px;
@@ -235,7 +236,8 @@ h4 {
 
 .skill-dark {
   color: #fff;
-  background-color: #333 !important;
+  background: rgb(12,12,13) !important;
+  background: linear-gradient(40deg, rgba(12,12,13,1) 0%, rgba(24,27,28,1) 57%) !important; 
 }
 
 .about-dark {
