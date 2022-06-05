@@ -17,6 +17,10 @@ body {
   padding: 60px 100px 100px 60px;
 }
 
+:root {
+  --primary-color: #ff4a4a;
+}
+
 /* Types */
 
 /* h1: Hero h2: Tagline h3: Section headings h4: Other headings */
@@ -45,7 +49,7 @@ h4 {
 
 .button {
   display: inline-block;
-  background: #ff4a4a;
+  background: var(--primary-color);
   text-decoration: none;
   color: #fff;
   padding: 10px 25px;
@@ -66,7 +70,7 @@ h4 {
 .button-ghost {
   background: transparent;
   border: 1px solid #ff4a4a;
-  color: #ff4a4a;
+  color: var(--primary-color);
 }
 
 .button:hover {
@@ -210,7 +214,7 @@ h4 {
 }
 
 .about code {
-  background: #ff4a4a;
+  background: var(--primary-color);
   border-radius: 3px;
   color: #fff;
   padding: 5px;
@@ -219,18 +223,24 @@ h4 {
 
 .about .social-icons {
   margin-top: 30px;
+  margin-bottom: 40px;
 }
 
-
-.about .social-icons img {
-  height: 30px;
-  width: 30px;
+.about .social-icons i {
+  
 }
 
 .about .social-icons a {
   margin-right: 20px;
 }
 
+.about .social-icons a:visited {
+  color: #333;
+}
+
+.about .resume-download {
+  color: var(--primary-color);
+}
 
 /* JS Classes */
 
@@ -258,6 +268,10 @@ h4 {
 .about-dark {
   color: #fff;
   background-color: #111;
+}
+
+.about .social-icons.social-icons-dark a {
+  color: #fff;
 }
 
 /* Media Queries */

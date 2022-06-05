@@ -5,7 +5,8 @@ const dom = {
   skill: document.querySelectorAll('.skill'),
   about: document.querySelector('.about'),
   buttonGhost: document.querySelectorAll('.button-ghost'),
-  email: document.querySelector('code')
+  email: document.querySelector('code'),
+  socialIcons: document.querySelector('.social-icons')
 }
 
 const handleClick = e => {
@@ -14,6 +15,7 @@ const handleClick = e => {
   dom.projects.classList.toggle('projects-dark')
   dom.skills.classList.toggle('skills-dark')
   dom.about.classList.toggle('about-dark')
+  dom.socialIcons.classList.toggle('social-icons-dark')
 
   dom.buttonGhost.forEach(button => {
     button.classList.toggle('button-dark')
@@ -30,18 +32,18 @@ const handleClick = e => {
   }
 }
 
-const copyToClipboard = () => {
-  const el = document.createElement('textarea');
-  el.value = 'akhillav@gmail.com';
-  el.setAttribute('readonly', '');
-  el.style.position = 'absolute';
-  el.style.left = '-9999px';
-  document.body.appendChild(el);
-  el.select();
-  document.execCommand('copy');
-  document.body.removeChild(el);
+const copyEmailToClipboard = () => {
+  const el = document.createElement('textarea')
+  el.value = 'akhillav007@gmail.com'
+  el.setAttribute('readonly', '')
+  el.style.position = 'absolute'
+  el.style.left = '-9999px'
+  document.body.appendChild(el)
+  el.select()
+  document.execCommand('copy')
+  document.body.removeChild(el)
   alert('Copied to clipboard!')
 };
 
 dom.darkModeButton.addEventListener('click', handleClick)
-dom.email.addEventListener('click', copyToClipboard)
+dom.email.addEventListener('click', copyEmailToClipboard)
