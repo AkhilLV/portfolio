@@ -32,18 +32,4 @@ const handleClick = e => {
   }
 }
 
-const copyEmailToClipboard = () => {
-  const el = document.createElement('textarea')
-  el.value = 'akhillav007@gmail.com'
-  el.setAttribute('readonly', '')
-  el.style.position = 'absolute'
-  el.style.left = '-9999px'
-  document.body.appendChild(el)
-  el.select()
-  document.execCommand('copy')
-  document.body.removeChild(el)
-  alert('Copied to clipboard!')
-};
-
 dom.darkModeButton.addEventListener('click', handleClick)
-dom.email.addEventListener('click', copyEmailToClipboard)
