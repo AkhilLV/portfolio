@@ -211,23 +211,16 @@ h4 {
 .about .paragraph {
   width: 50%;
   line-height: 1.7;
+  margin-bottom: 10px;
 }
 
-.about code {
-  background: var(--primary-color);
-  border-radius: 3px;
-  color: #fff;
-  padding: 5px;
-  cursor: pointer;
+.about .paragraph span {
+  text-decoration: underline;
 }
 
 .about .social-icons {
   margin-top: 30px;
   margin-bottom: 40px;
-}
-
-.about .social-icons i {
-  
 }
 
 .about .social-icons a {
@@ -261,8 +254,12 @@ h4 {
 
 .skill-dark {
   color: #fff;
-  background: rgb(12,12,13) !important;
-  background: linear-gradient(40deg, rgba(12,12,13,1) 0%, rgba(24,27,28,1) 57%) !important; 
+  background: rgb(12, 12, 13) !important;
+  background: linear-gradient(
+    40deg,
+    rgba(12, 12, 13, 1) 0%,
+    rgba(24, 27, 28, 1) 57%
+  ) !important;
 }
 
 .about-dark {
@@ -283,7 +280,6 @@ h4 {
 }
 
 @media (max-width: 705px) {
-  
   .container {
     padding: 60px 25px 100px 25px;
   }
