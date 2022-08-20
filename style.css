@@ -31,7 +31,6 @@ h1 {
 }
 
 h2 {
-  font-weight: 100;
   font-size: 1.3rem;
 }
 
@@ -54,7 +53,7 @@ h4 {
   color: #fff;
   padding: 10px 25px;
   font-weight: 500;
-  border-radius: 2px;
+  border-radius: 5px;
   transition: 250ms ease-in-out;
 }
 
@@ -69,8 +68,13 @@ h4 {
 
 .button-ghost {
   background: transparent;
-  border: 1px solid #ff4a4a;
+  border: 1px solid var(--primary-color);
   color: var(--primary-color);
+}
+
+.button-white {
+  background-color: #fff;
+  color: #333;
 }
 
 .button:hover {
@@ -83,17 +87,23 @@ h4 {
 
 /* Hero */
 .hero {
-  background-image: url("./images/hero.jpg");
-  background-color: rgba(0, 0, 0, 0.4);
+  /* background-image: url("./images/hero.jpg"); */
+  /* background-color: rgba(0, 0, 0, 0.4); */
+
+  background: rgb(255, 125, 125);
+  background: radial-gradient(
+    circle,
+    rgba(255, 125, 125, 1) 0%,
+    rgba(255, 255, 255, 1) 94%
+  );
   background-blend-mode: overlay;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  color: #fff;
 }
 
 .hero .hero-nav {
-  margin-bottom: 60px;
+  margin-bottom: 70px;
 }
 
 .hero .hero-nav ul {
@@ -120,6 +130,15 @@ h4 {
 
 .hero .hero-content {
   margin-bottom: 30px;
+}
+
+.hero .hero-content h1 {
+  font-size: 2rem;
+}
+
+.hero .hero-content p {
+  font-size: 1.5rem;
+  color: #a82b2b;
 }
 
 .hero .hero-button {
