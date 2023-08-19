@@ -14,14 +14,23 @@ body {
 }
 
 .container {
-  padding: 60px 100px 100px 60px;
+  padding: 60px 150px 60px 150px;
 }
 
 :root {
-  --primary-color: #ff4a4a;
+  --primary-color: #d71313;
 }
 
 /* Types */
+
+.center {
+  display: grid;
+  place-items: center;
+}
+
+.underline {
+  text-decoration: underline;
+}
 
 /* h1: Hero h2: Tagline h3: Section headings h4: Other headings */
 
@@ -89,17 +98,7 @@ h4 {
 .hero {
   /* background-image: url("./images/hero.jpg"); */
   /* background-color: rgba(0, 0, 0, 0.4); */
-
-  background: rgb(255, 125, 125);
-  background: radial-gradient(
-    circle,
-    rgba(255, 125, 125, 1) 0%,
-    rgba(255, 255, 255, 1) 94%
-  );
-  background-blend-mode: overlay;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  border-bottom: #eee solid 1px;
 }
 
 .hero .hero-nav {
@@ -110,7 +109,14 @@ h4 {
   display: flex;
   list-style: none;
   gap: 40px;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
+}
+
+.hero li .icon {
+  width: 25px;
+  margin-left: 7px;
 }
 
 .hero .hero-nav ul li a {
@@ -124,24 +130,46 @@ h4 {
   transition: 250ms ease-in-out;
 }
 
+#dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222;
+  color: #fff;
+}
+
 .hero .hero-nav ul li a:hover {
   background: rgba(255, 255, 255, 0.8);
 }
 
+.hero li .icon {
+  width: 25px;
+}
+
 .hero .hero-content {
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .hero .hero-content h1 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
-.hero .hero-content p {
+.hero .hero-content p.subtitle {
   font-size: 1.5rem;
   color: #a82b2b;
 }
 
-.hero .hero-button {
+.hero .hero-content p.text {
+  color: #222;
+  font-size: 1.1rem;
+  margin: 20px auto;
+  max-width: 67%;
+  word-wrap: break-word;
+}
+
+.hero .hero-content .hero-button {
+  margin-top: 40px;
   font-size: 1rem;
 }
 
