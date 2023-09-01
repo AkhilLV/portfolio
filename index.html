@@ -40,17 +40,27 @@
           technologies and improve on ones I already know. I am working on
           SpaceLearn, an app which aids in spaced learning.
         </p>
-        <a href="#about" class="hero-button button">Get in touch!</a>
+        <div class="buttons">
+          <a href="#about" class="hero-button button">Get in touch!</a>
+          <a
+            href="https://drive.google.com/file/d/18sgYe2yM5p2Xg9uEupUDjxHBSIrYny0C/view?usp=sharing"
+            class="resume-button button"
+            >Download Resume
+            <img src="./images/download.svg" alt="Link to resume"
+          /></a>
+        </div>
       </div>
     </div>
 
     <div class="container projects" id="projects">
-      <h3>Some of the stuff that I have build</h3>
+      <h3>Some of the stuff that I have built</h3>
 
       <div class="project-list">
         <div class="project">
-          <div class="project-title">
-            <h4>Spacelearn</h4>
+          <div class="project-title">Spacelearn</div>
+
+          <div class="project-buttons">
+            <a href="https://github.com/AkhilLV/SpaceLearn">Github</a>
           </div>
           <div class="project-description">
             <p>
@@ -58,39 +68,60 @@
               combat that. Create cards for every 4 study sessions and be at the
               top of your game!
             </p>
+            <h4>Motivation</h4>
+            <p>
+              I was studying for the KEAM, which is the entrance exam for
+              engineering colleges in Kerala, when I came across spaced
+              learning.
+            </p>
+            <p>
+              For a couple days I manually kept track of what I learned and when
+              I should revise it. I thought it would be a good idea to automate
+              this and that's how SpaceLearn was born.
+            </p>
+
+            <p>
+              I learned a lot about React, Node and PosgreSQL and testing the
+              backend API with testing tools like Chai and Mocha. I also learned
+              how to deploy a full stack app to Heroku. Heroku shut down it's
+              free tier a while ago so you got to wait a bit to see the app in
+              action. :)
+            </p>
           </div>
+
+          <h4>The tech stack</h4>
           <div class="project-tech-stack">
             <p class="skill">React.js</p>
             <p class="skill">Node.js</p>
             <p class="skill">PostgreSQL</p>
           </div>
-          <div class="project-buttons">
-            <a
-              href="https://distracted-gates-ec9cfc.netlify.app"
-              class="button button-ghost"
-              >Live Site</a
-            >
-            <a href="https://github.com/AkhilLV/SpaceLearn" class="button"
-              >Github</a
-            >
-          </div>
         </div>
+
         <div class="project">
-          <div class="project-title">
-            <h4>DuplicateFinder</h4>
+          <div class="project-title">KTU-notifier</div>
+
+          <div class="project-buttons">
+            <a href="https://github.com/AkhilLV/ktu-notifier">Github</a>
           </div>
           <div class="project-description">
-            <p>Find and delete duplicate images across directories</p>
+            <p>Get latest KTU notifications directly in your inbox</p>
+            <h4>Motivation</h4>
+            <p>Being an Engineering student, I have supplies.</p>
+
+            <p>
+              I had a close call once where I didn't know the supplementary
+              registration was open and I had to register at the last moment.
+              This is to prevent further risque moves
+            </p>
           </div>
+
+          <h4>The tech stack</h4>
           <div class="project-tech-stack">
-            <p class="skill">Javascript</p>
-            <p class="skill">Electron</p>
-          </div>
-          <div class="project-buttons">
-            <a href="https://github.com/AkhilLV/DuplicateFinder" class="button"
-              >Github</a
-            >
-            <!-- <a href="#" class="button button-ghost">Live Site</a> -->
+            <p class="skill">Node.js</p>
+            <p class="skill">Cheerio</p>
+            <p class="skill">SQLite</p>
+            <p class="skill">HTML/CSS</p>
+            <p class="skill">AWS</p>
           </div>
         </div>
       </div>
@@ -137,11 +168,6 @@
           ><i class="fa-brands fa-linkedin fa-2xl"></i
         ></a>
       </div>
-      <a
-        href="https://drive.google.com/file/d/176Ca_tH-0aVersZDM8H1BI456KOhoUb9/view?usp=sharing"
-        class="resume-download"
-        >Download Resume</a
-      >
     </div>
   </body>
 </html>
