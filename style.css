@@ -23,11 +23,6 @@ body {
 
 /* Types */
 
-.center {
-  display: grid;
-  place-items: center;
-}
-
 .underline {
   text-decoration: underline;
 }
@@ -71,8 +66,8 @@ h4 {
 }
 
 .button-dark {
-  background: #333;
-  box-shadow: none;
+  background-color: #222;
+  color: #fff !important;
 }
 
 .button-ghost {
@@ -94,10 +89,18 @@ h4 {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
 }
 
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transition {
+  transition: 100ms ease-in-out;
+}
+
 /* Hero */
 .hero {
-  /* background-image: url("./images/hero.jpg"); */
-  /* background-color: rgba(0, 0, 0, 0.4); */
   border-bottom: #eee solid 1px;
 }
 
@@ -106,11 +109,8 @@ h4 {
 }
 
 .hero .hero-nav ul {
-  display: flex;
   list-style: none;
   gap: 40px;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -120,26 +120,12 @@ h4 {
 }
 
 .hero .hero-nav ul li a {
-  display: inline-block;
   text-decoration: none;
   color: #333;
-  background: rgba(255, 255, 255, 0.5);
   border-radius: 3px;
   padding: 5px 10px;
   font-size: 0.9rem;
   transition: 250ms ease-in-out;
-}
-
-#dark-mode-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #222;
-  color: #fff;
-}
-
-.hero .hero-nav ul li a:hover {
-  background: rgba(255, 255, 255, 0.8);
 }
 
 .hero li .icon {
@@ -161,7 +147,6 @@ h4 {
 }
 
 .hero .hero-content p.text {
-  color: #222;
   font-size: 1.1rem;
   margin: 20px auto;
   max-width: 67%;
@@ -173,19 +158,13 @@ h4 {
 }
 
 .hero .hero-content .buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 6px;
   margin-top: 40px;
 }
 
 .hero .hero-content .resume-button {
   background-color: #19ceb6;
-  display: flex;
   color: #111;
-  align-items: center;
-  justify-content: center;
 }
 
 .hero .hero-content .resume-button img {
@@ -197,12 +176,6 @@ h4 {
 
 .projects h3 {
   margin-bottom: 60px;
-}
-
-.project-list {
-  /* display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 100px; */
 }
 
 .project-list .project {
@@ -310,6 +283,20 @@ h4 {
 }
 
 /* JS Classes */
+
+.hero-dark {
+  color: #fff;
+  background-color: #111;
+  border-color: #222;
+}
+
+.hero-dark .hero-nav ul li a {
+  color: #fff;
+}
+
+.hero-dark .hero-nav ul li#theme-toggle a {
+  color: #222;
+}
 
 .projects-dark {
   color: #fff;

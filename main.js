@@ -1,35 +1,53 @@
 const dom = {
-  darkModeButton: document.getElementById('dark-mode-toggle'),
-  projects: document.querySelector('.projects'),
-  skills: document.querySelector('.skills'),
-  skill: document.querySelectorAll('.skill'),
-  about: document.querySelector('.about'),
-  buttonGhost: document.querySelectorAll('.button-ghost'),
-  email: document.querySelector('code'),
-  socialIcons: document.querySelector('.social-icons')
-}
+  toggleTheme: document.getElementById("theme-toggle"),
+  hero: document.querySelector(".hero"),
+  projects: document.querySelector(".projects"),
+  skills: document.querySelector(".skills"),
+  skill: document.querySelectorAll(".skill"),
+  about: document.querySelector(".about"),
+  buttonGhost: document.querySelectorAll(".button-ghost"),
+  email: document.querySelector("code"),
+  socialIcons: document.querySelector(".social-icons"),
+};
 
-const handleClick = e => {
-  e.preventDefault()
+const darkModeHTML = `<a href="#" class="button-dark center">
+    Dark Mode
+    <img src="images/night.svg" class="icon"/>
+  </a>`;
 
-  dom.projects.classList.toggle('projects-dark')
-  dom.skills.classList.toggle('skills-dark')
-  dom.about.classList.toggle('about-dark')
-  dom.socialIcons.classList.toggle('social-icons-dark')
+const lightModeHTML = `<a href="#" class="button-white center">
+    Light Mode
+    <img src="images/light.svg" class="icon"/>
+  </a>`;
 
-  dom.buttonGhost.forEach(button => {
-    button.classList.toggle('button-dark')
-  })
+const handleClick = (e) => {
+  e.preventDefault();
 
-  dom.skill.forEach(el => {
-    el.classList.toggle('skill-dark')
-  })
+  const PREV_THEME = dom.toggleTheme.textContent.trim();
 
-  if (dom.darkModeButton.textContent === 'Light Mode') {
-    dom.darkModeButton.textContent = 'Dark Mode'
-  } else {
-    dom.darkModeButton.textContent = 'Light Mode'
+  dom.hero.classList.toggle("hero-dark");
+  dom.projects.classList.toggle("projects-dark");
+  dom.skills.classList.toggle("skills-dark");
+  dom.about.classList.toggle("about-dark");
+  dom.socialIcons.classList.toggle("social-icons-dark");
+
+  dom.buttonGhost.forEach((button) => {
+    button.classList.toggle("button-dark");
+  });
+
+  dom.skill.forEach((el) => {
+    el.classList.toggle("skill-dark");
+  });
+
+  while (dom.toggleTheme.firstChild) {
+    dom.toggleTheme.removeChild(dom.toggleTheme.firstChild); // remove all html inside
   }
-}
 
-dom.darkModeButton.addEventListener('click', handleClick)
+  if (PREV_THEME === "Light Mode") {
+    dom.toggleTheme.insertAdjacentHTML("beforeend", darkModeHTML);
+  } else {
+    dom.toggleTheme.insertAdjacentHTML("beforeend", lightModeHTML);
+  }
+};
+
+dom.toggleTheme.addEventListener("click", handleClick);
